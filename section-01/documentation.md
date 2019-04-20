@@ -1,20 +1,24 @@
-# Typescript tutorial
+# Section 1
 
-## ``$ npm -g install typescript``
+## Basic commands and steps to successfully run our typescript files
 
-## ``$ tsc .\app.ts``
+### ``$ npm -g install typescript``
 
-### for compiling from typescript files to javascript
+#### Installs the typescript library globally
+
+### ``$ tsc app.ts``
+
+#### Transpiles a .ts file into its javascript representation. At this point, we are able to run our application by importing the generated app.js file at the very bottom of the page
 
 ### ``$ npm init``
 
-#### select all options by default
+#### Creates a package.json file. it's fine if you leave blank all  options while creating this file
 
 ### ``$ npm install lite-server``
 
-#### updates the application whatever we change the js code
+#### Library that automatically updates the application whatever we change the js code. Note: The .ts files always need to be converted to .js (because we don't want to modify the .js files directly) so that live-server will actually detect what changed
 
-### Add a new script under the package.json to run lite-server automatically and name it *start*
+### Add a new script under the package.json file to run lite-server automatically and name it *start*
 
 ```"main": "script.js",
   "scripts": {
@@ -24,14 +28,18 @@
   "author": "",
 ```
 
-### ``tsc --init``
+### ``$ tsc --init``
 
-#### Creates a tsconfig.json file
+#### Creates a tsconfig.json file. It tells the compiler that the project that we are running is configured for using typescript and that it should detect and compile all .ts files and convert them to .js
 
-#### Puts the project under the control of typescript
+### ``$ tsc``
 
-#### Tells the compiler that the project that we are running is in typescript and that should detect and compile all .ts files and convert them to .js
+#### The compiler will detect all the .ts files and convert them to .js extension. This is possible thanks to the configuration added in the previous step
 
-### ``tsc .\app.ts``
+### ``$ npm start``
 
-#### Compiles all .ts files to javascript at once on the selected project (including nested folders)
+#### Start the application. The lite-server is now listening for any change
+
+### In case that we edit a .ts and we want the browser to be aware of this, just run ``tsc`` again
+
+### The files with other extension types will be easily detected by live-server as well. e.g.: index.html
