@@ -32,7 +32,7 @@ greet({
     greet(lastName: string) {
         console.log('Hello, I am', this.firstName, lastName);
     }
-}); // any value is acceptable unless it accomplishes the contract. lastName is nullable
+}); // any value is acceptable as long as it fulfills the contract.
 changeName(person);
 greet(person);
 
