@@ -1,3 +1,9 @@
+# ignore most of node_modules, .js and .js.map files
+
 /**/node_modules/
 *.js
 *.js.map
+
+# but not these files
+!/section-11/code/part1/gulpfile.js
+!/section-11/code/part2/webpack.config.js
