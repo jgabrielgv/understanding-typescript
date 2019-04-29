@@ -7,3 +7,4 @@
 # but not these files
 !/section-11/code/part1/gulpfile.js
 !/section-11/code/part2/webpack.config.js
+!/section-12/code/part2/webpack.config.js
